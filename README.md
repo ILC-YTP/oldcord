@@ -1,3 +1,11 @@
+# If you're lost, go here [click here](https://github.com/milbits/oldcord)
+# This is for experimenting on my own and sending pull requests
+
+
+
+
+
+
 # OldCord
 
 A Discord theme that tries to restore its 2020 UI

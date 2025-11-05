@@ -551,6 +551,14 @@ html.visual-refresh {
 			display: none;
 		}
 	}
+	.header_d5f3cd {
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+	.infoIcon_ae2544 {
+		margin-bottom: -3px;
+		margin-left: 5px
+	}
 
 	.clickable__9293f .icon__9293f {
 		color: var(--interactive-normal);
@@ -562,11 +570,11 @@ html.visual-refresh {
 		backdrop-filter: unset;
 	}
 	/* channel menus */
-	.header__45690 {
+	.header_e8b59c {
 		background: var(--background-tertiary);
 		border-bottom: 2px solid var(--background-modifier-accent);
 	}
-	.messagesPopoutWrap__45690 {
+	.messagesPopoutWrap_e8b59c {
 		background-color: var(--background-secondary);
 		border-radius: 8px;
 		max-height: 91vh !important;
@@ -1055,6 +1063,7 @@ html.visual-refresh {
 		}
 		.interactiveSelected__972a0 .name__20a53,
 		.interactiveSelected__972a0 .subText__20a53 [data-text-variant="text-xs\/medium"],
+		.interactiveSelected__972a0 .subText__20a53 .textWithIconContainer_c9d15c:before,
 		.interactiveSelected__972a0 .subtext__972a0 {
 			color: var(--interactive-active) !important;
 		}
@@ -1776,7 +1785,7 @@ html.visual-refresh {
 	.container_fc561d,
 	.recentMentionsPopout__95796 {
 		background-color: var(--background-secondary);
-		.header__45690 {
+		.header_e8b59c {
 			border-bottom: unset;
 		}
 		.header_ab6641 {

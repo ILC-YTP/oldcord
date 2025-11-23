@@ -6,6 +6,10 @@
 }
 .panel__5dec7 {
 	background-color: var(--background-gradient-lowest, var(--background-secondary-alt)) !important;
+	.gameName__8c6c2 {
+		color: var(--header-secondary);
+		font-size: 14px;
+	}
 }
 
 /** bottom-left popout */
@@ -368,12 +372,37 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 	width: 38px;
 }
 
+.user-profile-popout .inner_c0bea0 .header__39ec2 {
+	font-size: 12px;
+	height: 12px;
+}
+
 .user-profile-popout .inner_c0bea0 .headerText__39ec2 {
 	text-transform: uppercase;
 	font-weight: 700;
 	html.theme-light & {
 		color: white !important;
 	}
+}
+
+.user-profile-popout .details__39ec2 {
+	gap: unset;
+}
+.user-profile-popout .content__39ec2 {
+	align-items: center;
+}
+.user-profile-popout .actions__39ec2 button {
+	background-color: var(--control-background-secondary-default) !important;
+    border: 1px solid var(--white) !important;
+}
+.user-profile-popout .badgesContainer__635ed .badgeContainer__635ed:nth-child(2) {
+	order: -1;
+}
+
+.contentImage_ef9ae7[src^="https://cdn.discordapp.com/app-icons/"] {
+	max-width: 40px !important;
+	min-width: 40px;
+	min-height: 40px !important;
 }
 /* make activity the first section*/
 section:has(.activityContainer__84832) {
@@ -396,7 +425,7 @@ section:has(.activityContainer__84832) {
 /* change activity bg color and padding*/
 .user-profile-popout .card__39ec2 {
 	background-color: var(--background-secondary-alt) !important;
-	padding: 12px;
+	padding: 16px;
 	border-radius: 0;
 }
 /*change some other colors for the activity section*/
@@ -446,26 +475,26 @@ html.theme-dark .badgeContainer__635ed path {
 }
 
 /*activity buttons*/
-.card__39ec2 .button_fb7f94 {
+.card__39ec2 :is(.button_fb7f94, .button_a22cb0) {
 	background: transparent !important;
 	color: var(--text-primary);
-	border: 1px solid var(--text-primary);
+	border: 1px solid var(--text-primary) !important;
 	transition: 0.17s ease;
 	opacity: 1 !important;
 	padding: 14px 16px;
 }
-.card__39ec2 :is(.colorBrand__201d5, .button_fb7f94):hover {
+.card__39ec2 :is(.colorBrand__201d5, .button_fb7f94, .button_a22cb0):hover {
 	background: transparent !important;
 }
 
-.card__39ec2 .button_fb7f94:not(:disabled):active {
+.card__39ec2 :is(.button_fb7f94, .button_a22cb0):not(:disabled):active {
 	border-color: var(--text-primary);
 	background: #ffffff1a !important;
 }
 
-.card__39ec2 .button_fb7f94:disabled {
+.card__39ec2 .:is(.button_fb7f94, .button_a22cb0):disabled {
 	border-color: #ffffff5d;
-	background: transparent;
+	background: transparent !important;
 	color: #ffffff5d;
 }
 
@@ -473,10 +502,11 @@ html.theme-dark .badgeContainer__635ed path {
 .descriptionClamp_f5f93a,
 .user-profile-popout .root_fccfdf,
 .section_bf424d:has(.list__20827) {
-	padding-left: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 .descriptionClamp_f5f93a {
-	padding: 16px 12px 0px 12px;
+	padding: 16px 16px 0px 16px;
 }
 
 .body__5be3e {
@@ -663,13 +693,16 @@ html.theme-dark .badgeContainer__635ed path {
 .userTagUsername__63ed3,
 .userTagDiscriminator__63ed3 {
 	color: var(--text-secondary);
-	.container__63ed3 &:before {
+	.container__63ed3:not(.bot__63ed3) &:before {
 		content: "@";
 	}
 }
 
 .pronounsText__63ed3 {
 	color: var(--text-tertiary) !important;
+	max-width: 255px;
+	white-space: wrap;
+	padding: 0px 16px;
 }
 /*bot tag*/
 .outer_c0bea0.user-profile-popout:has(.card__39ec2) .botTagRegular__82f07 {
@@ -683,6 +716,9 @@ html.theme-dark .badgeContainer__635ed path {
 /** Custom status*/
 .statusText__19b6d {
 	color: var(--header-secondary);
+}
+.user-profile-popout .statusText_ab8609 {
+	color: var(--text-tertiary);
 }
 .user-profile-popout .userInfo__0a06e .text__19b6d {
 	color: var(--text-muted);
@@ -704,6 +740,7 @@ html.theme-dark .badgeContainer__635ed path {
 	border: none !important;
 }
 .inner_ab8609 {
+	padding: 8px 16px;
 	background: unset !important;
 }
 .labelRow_ab8609 {
@@ -724,7 +761,7 @@ html.theme-dark .badgeContainer__635ed path {
 
 /*! modal profile*/
 .user-profile-modal-v2 {
-	border: none;
+	outline: none;
 	border-radius: 8px;
 }
 .user-profile-modal-v2 .inner_c0bea0 {
@@ -820,6 +857,21 @@ svg.icon_a22cb0:has([d="M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10-2a2 2 0 1 1-4 0 2 
 #activity-tab {
 	margin-right: 24px;
 }
+#activity-tab h3{
+	font-weight: 900;
+	text-transform: uppercase;
+	color: var(--header-secondary) !important;
+}
+#activity-tab .text-xs\/normal_cf4812{
+	color: var(--text-secondary) !important
+}
+#activity-tab .heading-sm\/semibold_cf4812 {
+	color: var(--text-secondary) !important
+
+}
+#activity-tab .lineClamp1__4bd52{
+	color: var(--text-tertiary) !important
+}
 .user-profile-modal-v2 .cards__764cd {
 	gap: 4px;
 }
@@ -833,9 +885,7 @@ svg.icon_a22cb0:has([d="M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10-2a2 2 0 1 1-4 0 2 
 	}
 	&:has(.tabularNumbers__4bd52) {
 		background: var(--brand-experiment-530) !important;
-		& h3 {
-			color: white !important;
-		}
+		--text-secondary: rgba(255, 255, 255, 0.9);
 	}
 	&:first-child {
 		border-top-left-radius: 20px;
@@ -980,7 +1030,7 @@ text-align: center;
 	}
 	& span:nth-of-type(1) {
 		width: 0;
-		margin-left: 10px;
+		margin-left: 15px;
 	}
 	& .button__0f074 {
 		opacity: 1;
@@ -988,7 +1038,7 @@ text-align: center;
 	}
 	& .hiddenVisually_b18fe2:before {
 		content: "NOTE";
-		left: 5%;
+		left: 7%;
 		position: absolute;
 		margin-top: -25px;
 		color: var(--header-secondary);
@@ -1065,7 +1115,7 @@ text-align: center;
 	flex-direction: column;
 	flex-wrap: unset;
 	align-items: start;
-	padding: 16px 12px 20px 12px;
+	padding: 16px 16px 20px 16px;
 	.text-xs\/medium_cf4812 {
 		font-size: 12px;
 		color: var(--header-secondary);
@@ -1094,13 +1144,16 @@ text-align: center;
 	& .text__530ce {
 		color: var(--interactive-normal) !important;
 	}
-	padding-bottom: 3px;
+	padding: 0 16px 10px 16px;
 	order: -1;
 	& .text__530ce.text-sm\/normal_cf4812 {
 		font-size: 12px !important;
 	}
 	.theme-light & .text__530ce.text-sm\/normal_cf4812 {
 		color: var(--interactive-active) !important;
+	}
+	.spacer__530ce {
+		visibility: hidden;
 	}
 }
 
@@ -1183,6 +1236,7 @@ section .headings_bf424d:has(+.root_fccfdf) /*"roles" header on bots*/ {
 	border: 0 !important;
 	border-radius: 4200px;
 	max-width: 225px !important;
+	height: 22px;
 }
 
 .addButtonIcon__48c1c {

@@ -122,7 +122,7 @@ html.platform-linux {
 		display: none;
 	}
 	.bar_c38106 .trailing_c38106 {
-		top: 37px !important;
+		top: 40px !important;
 	}
 	.scroller_ef3116 {
 		padding-top: 12px !important;
@@ -176,14 +176,14 @@ html.platform-osx .systemBar_c38106 {
 html.platform-win .sidebarListRounded__5e434 {
 	border-top-left-radius: 8px !important;
 }
-html.platform-win .trailing_c38106 :is(.recentsIcon_c99c29, .anchor_edefb8) {
-	transform: translateY(3px);
-}
 html.platform-win .container__5e434:has(.notice__6e2b9, .bd-notice) .sidebarListRounded__5e434 {
 	border-top-left-radius: unset !important;
 }
 html.platform-osx .title_c38106 {
 	display: none !important;
+}
+html.platform-win .trailing_c38106 {
+	margin-top: 6px !important;
 }
 #app-mount .h5_b717a1.eyebrow_b717a1 {
 	text-transform: uppercase !important;
@@ -413,6 +413,9 @@ html.visual-refresh {
 		border: unset;
 		box-shadow: var(--shadow-ledge);
 	}
+	.invitesRefresh_f37cb1 .header_f37cb1 {
+		padding: unset;
+	}
 	.bannerVisible_f37cb1 .header_f37cb1 {
 		border-bottom-color: transparent;
 	}
@@ -422,6 +425,23 @@ html.visual-refresh {
 	.container__9293f {
 		border: unset;
 		box-shadow: var(--shadow-ledge);
+	}
+	.invitesRefresh_f37cb1 .headerContent_f37cb1 {
+		gap: unset;
+		justify-content: unset;
+		height: 100%;
+		span {
+			display: none;
+		}
+		.guildDropdown_f37cb1 {
+		    gap: unset;
+			width: 100%;
+			padding: var(--space-xs) var(--space-md);
+			border-radius: 0;
+		}
+		.guildIconContainer__85d16:not(.invitesRefresh__85d16) {
+			margin-inline-end: 0;
+		}
 	}
 	.title_f75fb0:has(.wrapper__44b0c) {
 		&:not(.gdm_f75fb0) {
@@ -806,6 +826,7 @@ html.visual-refresh {
 	/* border radius 9 list of offenders */
 	.root__49fc1,
 	.container_e45859,
+	.container__60fa3,
 	.searchBar__5ec2f,
 	.tooltip_c36707,
 	.link__2ea32,
@@ -861,6 +882,9 @@ html.visual-refresh {
 	}
 	.button__7d7f7 {
 		border-radius: 999% !important;
+		[data-text-variant="text-xs/normal"] {
+			display: none;
+		}
 	}
 	.sm_a22cb0 {
 		height: var(--custom-button-button-sm-height);
@@ -1048,6 +1072,14 @@ html.visual-refresh {
 		svg {
 			width: 24px;
 			height: 24px;
+			svg:has([d="M19.38 11.38a3 3 0 0 0 4.24 0l.03-.03a.5.5 0 0 0 0-.7L13.35.35a.5.5 0 0 0-.7 0l-.03.03a3 3 0 0 0 0 4.24L13 5l-2.92 2.92-3.65-.34a2 2 0 0 0-1.6.58l-.62.63a1 1 0 0 0 0 1.42l9.58 9.58a1 1 0 0 0 1.42 0l.63-.63a2 2 0 0 0 .58-1.6l-.34-3.64L19 11l.38.38ZM9.07 17.07a.5.5 0 0 1-.08.77l-5.15 3.43a.5.5 0 0 1-.63-.06l-.42-.42a.5.5 0 0 1-.06-.63L6.16 15a.5.5 0 0 1 .77-.08l2.14 2.14Z"]) {
+				width: 20px;
+				height: 20px;
+			}
+
+		}
+		.iconBadgeBottom__9293f {
+			bottom: 1px;
 		}
 	}
 	.avatarWrapper__37e49 {
@@ -1243,12 +1275,19 @@ html.visual-refresh {
 			margin-left: 4px;
 			margin-right: 4px;
 		}
+		.buttonContainer_e6e74f.app-launcher-entrypoint {
+			width: 32px;
+			height: 32px;
+			margin-left: 4px;
+			margin-right: 4px;
+			--background-modifier-selected: transparent;
+		}
 		.spriteContainer__04eed {
 			--custom-emoji-sprite-size: 24px !important;
 		}
 		.lottieIcon__5eb9b {
-			height: unset !important;
-			width: unset !important;
+			height: 24px !important;
+			width: 24px !important;
 			.channelAppLauncher_e6e74f & {
 				width: 24px !important;
 			}
@@ -2305,7 +2344,6 @@ html.visual-refresh {
 }
 .bar_c38106 .trailing_c38106 .clickable_c99c29 {
 	margin: unset;
-	margin-top: 6px;
 }
 .bar_c38106 .channelTabs-trailing .trailing_c38106 {
 	top: 36px;
@@ -2334,7 +2372,6 @@ html.visual-refresh {
 	width: 30px;
 	height: 30px;
 	border-radius: 4px;
-	top: 3px;
 }
 .bar_c38106 .trailing_c38106 .iconWrapper__9293f .icon__9293f {
 	width: 24px;
@@ -2370,7 +2407,7 @@ html .bar_c38106 {
 	position: absolute;
 	gap: unset;
 	justify-content: center;
-	bottom: 35px;
+	bottom: 38px;
 	left: -10px;
 	z-index: 3001;
 	-webkit-app-region: no-drag !important;
@@ -2378,6 +2415,9 @@ html .bar_c38106 {
 		align-items: center;
 		width: 28px;
 		height: 24px;
+	}
+	.winButtonClose_c38106 {
+		height: 22px;
 	}
 }
 .winButtonsWithDivider_c38106:before {
@@ -2544,6 +2584,10 @@ html .bar_c38106 {
 }
 #app-mount .emojiRow_e7d73e:before {
 	display: none;
+}
+
+.container__60fa3 {
+	border: 1px solid var(--background-base-lowest);
 }
 
 /*new settings*/

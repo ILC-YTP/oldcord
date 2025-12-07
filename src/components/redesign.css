@@ -722,9 +722,9 @@ html.visual-refresh {
 		gap: unset;
 		padding-left: unset;
 	}
-	.iconBadgeBottom__9293f {
-		right: 2px;
-		bottom: 0;
+	.iconBadge__9293f.iconBadgeBottom__9293f {
+		right: 1px !important;
+		bottom: 1px !important;
 		--custom-icon-offset: unset;
 	}
 	.navButton__08434 {
@@ -1076,9 +1076,6 @@ html.visual-refresh {
 				height: 20px;
 			}
 
-		}
-		.iconBadgeBottom__9293f {
-			bottom: 1px;
 		}
 	}
 	.avatarWrapper__37e49 {
